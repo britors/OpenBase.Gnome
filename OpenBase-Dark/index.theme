@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=OpenBase Dark
+Comment=Dark theme inspired by the OpenBase color palette — deep navy with purple-to-pink accents
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=OpenBase-Dark
+MetacityTheme=OpenBase-Dark
+IconTheme=Adwaita
+CursorTheme=Adwaita
+ButtonLayout=close,minimize,maximize:

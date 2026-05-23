@@ -1,0 +1,455 @@
+/* OpenBase Dark — GNOME Shell Theme (GNOME 45+/50) */
+
+/* ── Variables ───────────────────────────────────────────────────────────── */
+
+stage {
+  font-family: "Inter", "Cantarell", "Noto Sans", sans-serif;
+  font-size: 11pt;
+  color: #e2e2f0;
+}
+
+/* ── Panel / Top Bar ─────────────────────────────────────────────────────── */
+
+#panel {
+  background-color: #080a12;
+  color: #e2e2f0;
+  height: 32px;
+  border-bottom: 1px solid #1e2040;
+}
+
+#panel .panel-button {
+  color: #e2e2f0;
+  padding: 0 8px;
+  border-radius: 0;
+  transition-duration: 150ms;
+  -natural-hpadding: 8px;
+  -minimum-hpadding: 4px;
+}
+
+#panel .panel-button:hover {
+  background-color: rgba(180, 79, 255, 0.15);
+  color: #e2e2f0;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:checked {
+  background-color: rgba(180, 79, 255, 0.25);
+  color: #b44fff;
+}
+
+#panel .panel-button .system-status-icon {
+  icon-size: 16px;
+}
+
+#panel #dateMenu .clock {
+  color: #e2e2f0;
+  font-weight: 500;
+}
+
+/* ── Activities button ───────────────────────────────────────────────────── */
+
+#panel #activities {
+  color: #b44fff;
+  font-weight: bold;
+}
+
+#panel #activities:hover {
+  background-color: rgba(180, 79, 255, 0.2);
+}
+
+/* ── App Menu ────────────────────────────────────────────────────────────── */
+
+.panel-button.app-menu-button .label {
+  color: #e2e2f0;
+}
+
+/* ── Overview ────────────────────────────────────────────────────────────── */
+
+.overview-bg {
+  background-color: rgba(13, 15, 26, 0.85);
+}
+
+/* Search */
+.search-entry {
+  background-color: #1a1c2e;
+  color: #e2e2f0;
+  border: 1px solid #1e2040;
+  border-radius: 10px;
+  padding: 8px 14px;
+  width: 320px;
+}
+
+.search-entry:focus {
+  border-color: #b44fff;
+  box-shadow: 0 0 0 2px rgba(180, 79, 255, 0.25);
+}
+
+.search-entry .search-entry-icon {
+  color: #8888aa;
+  icon-size: 16px;
+}
+
+/* ── Dash ────────────────────────────────────────────────────────────────── */
+
+.dash-background {
+  background-color: rgba(8, 10, 18, 0.85);
+  border: 1px solid #1e2040;
+  border-radius: 16px;
+  padding: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.app-well-app .overview-icon,
+.dash-item-container .overview-icon {
+  border-radius: 10px;
+  transition-duration: 150ms;
+}
+
+.app-well-app:hover .overview-icon {
+  background-color: rgba(180, 79, 255, 0.15);
+}
+
+.app-well-app.running-app .overview-icon::after {
+  background-color: #b44fff;
+}
+
+.app-well-app:selected .overview-icon {
+  background-color: rgba(180, 79, 255, 0.3);
+}
+
+.dash-separator {
+  background-color: #1e2040;
+  width: 1px;
+  margin: 4px 0;
+}
+
+/* ── App grid ────────────────────────────────────────────────────────────── */
+
+.app-folder-icon {
+  background-color: rgba(26, 16, 64, 0.8);
+  border: 1px solid #1e2040;
+  border-radius: 14px;
+}
+
+.app-label {
+  color: #e2e2f0;
+}
+
+.show-apps .overview-icon {
+  border-radius: 50%;
+  background-color: rgba(30, 32, 64, 0.8);
+  color: #e2e2f0;
+}
+
+/* ── Quick Settings (System Menu) ────────────────────────────────────────── */
+
+.quick-settings {
+  background-color: #0d0f1a;
+  border: 1px solid #1e2040;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  color: #e2e2f0;
+}
+
+.quick-settings-system-item {
+  background-color: #131629;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.quick-toggle {
+  background-color: #1e2040;
+  border: 1px solid #2a2d5a;
+  border-radius: 10px;
+  color: #e2e2f0;
+  padding: 8px 12px;
+  transition-duration: 150ms;
+}
+
+.quick-toggle:hover {
+  background-color: #2a2d5a;
+  border-color: rgba(180, 79, 255, 0.4);
+}
+
+.quick-toggle:checked {
+  background-color: rgba(180, 79, 255, 0.25);
+  border-color: #b44fff;
+  color: #c878ff;
+}
+
+.quick-toggle-arrow {
+  color: #8888aa;
+}
+
+/* ── Notifications ───────────────────────────────────────────────────────── */
+
+.notification-banner {
+  background-color: #131629;
+  border: 1px solid #1e2040;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  color: #e2e2f0;
+}
+
+.notification-banner:hover {
+  border-color: rgba(180, 79, 255, 0.4);
+}
+
+.notification-header {
+  color: #8888aa;
+  font-size: 0.9em;
+  padding-bottom: 4px;
+}
+
+.notification-source-icon {
+  icon-size: 16px;
+}
+
+.notification-close-button {
+  color: #8888aa;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.notification-close-button:hover {
+  background-color: rgba(255, 85, 114, 0.2);
+  color: #ff5572;
+}
+
+/* Message tray */
+.message-list {
+  background-color: #090b14;
+  border: 1px solid #1e2040;
+  border-radius: 14px;
+  padding: 8px;
+}
+
+.message-list-placeholder {
+  color: #4a4a6a;
+}
+
+/* ── Calendar / Date Menu ────────────────────────────────────────────────── */
+
+.datemenu-today-button {
+  background-color: transparent;
+  color: #e2e2f0;
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.datemenu-today-button:hover {
+  background-color: rgba(180, 79, 255, 0.1);
+}
+
+.calendar {
+  background-color: transparent;
+  color: #e2e2f0;
+}
+
+.calendar-month-header {
+  color: #b44fff;
+  font-weight: bold;
+}
+
+.calendar-nav-button {
+  color: #8888aa;
+  border-radius: 50%;
+  padding: 4px;
+}
+
+.calendar-nav-button:hover {
+  background-color: rgba(180, 79, 255, 0.15);
+  color: #b44fff;
+}
+
+.calendar-day-base {
+  border-radius: 6px;
+  transition-duration: 100ms;
+}
+
+.calendar-day-base:hover {
+  background-color: rgba(180, 79, 255, 0.2);
+  color: #e2e2f0;
+}
+
+.calendar-day-base.calendar-today {
+  background-color: rgba(180, 79, 255, 0.3);
+  color: #c878ff;
+  font-weight: bold;
+}
+
+.calendar-day-base.calendar-other-month {
+  color: #4a4a6a;
+}
+
+.calendar-week-number {
+  color: #4a4a6a;
+  font-size: 0.85em;
+}
+
+/* ── OSD (on-screen display) ─────────────────────────────────────────────── */
+
+#osdWindow {
+  background-color: rgba(13, 15, 26, 0.9);
+  border: 1px solid #1e2040;
+  border-radius: 14px;
+  padding: 16px 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  color: #e2e2f0;
+  min-width: 200px;
+}
+
+#osdWindow .level {
+  background-color: #1e2040;
+  border-radius: 6px;
+  height: 4px;
+}
+
+#osdWindow .level:dir(ltr) {
+  background-color: #b44fff;
+}
+
+#osdWindow .level-bar {
+  background-color: #b44fff;
+  border-radius: 6px;
+}
+
+/* ── Run Dialog ──────────────────────────────────────────────────────────── */
+
+.run-dialog {
+  background-color: #131629;
+  border: 1px solid #1e2040;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  color: #e2e2f0;
+}
+
+.run-dialog-label {
+  color: #8888aa;
+  padding-bottom: 8px;
+}
+
+.run-dialog-entry {
+  background-color: #0d0f1a;
+  color: #e2e2f0;
+  border: 1px solid #1e2040;
+  border-radius: 8px;
+  padding: 8px 14px;
+  caret-color: #b44fff;
+}
+
+/* ── Workspace indicator ─────────────────────────────────────────────────── */
+
+.workspace-thumbnail-indicator {
+  border: 2px solid #b44fff;
+  border-radius: 4px;
+}
+
+/* ── Screenshot UI ───────────────────────────────────────────────────────── */
+
+.screenshot-ui-area-indicator {
+  border: 2px solid #b44fff;
+  border-radius: 4px;
+}
+
+.screenshot-ui-area-indicator-shade {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* ── Lock Screen ─────────────────────────────────────────────────────────── */
+
+#lockDialogGroup {
+  background-color: rgba(13, 15, 26, 0.85);
+}
+
+.login-dialog,
+.unlock-dialog {
+  background-color: rgba(13, 15, 26, 0.9);
+  border: 1px solid #1e2040;
+  border-radius: 14px;
+  padding: 32px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  color: #e2e2f0;
+}
+
+.user-widget .user-widget-label {
+  color: #e2e2f0;
+  font-size: 18pt;
+  font-weight: 300;
+}
+
+.unlock-dialog entry {
+  background-color: rgba(26, 28, 46, 0.8);
+  color: #e2e2f0;
+  border: 1px solid #1e2040;
+  border-radius: 8px;
+  padding: 10px 14px;
+  caret-color: #b44fff;
+}
+
+.unlock-dialog entry:focus {
+  border-color: #b44fff;
+}
+
+/* ── System Dialogs (shutdown, etc.) ─────────────────────────────────────── */
+
+.end-session-dialog {
+  background-color: #131629;
+  border: 1px solid #1e2040;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7);
+  color: #e2e2f0;
+}
+
+.end-session-dialog-subject {
+  font-size: 14pt;
+  font-weight: bold;
+  color: #e2e2f0;
+}
+
+.end-session-dialog-description {
+  color: #8888aa;
+}
+
+/* ── Magnifier ───────────────────────────────────────────────────────────── */
+
+.magnifier-zoom-region {
+  border: 2px solid #b44fff;
+}
+
+/* ── Looking Glass (dev console) ─────────────────────────────────────────── */
+
+#lookingGlass {
+  background-color: rgba(8, 10, 18, 0.92);
+  border-top: 2px solid #b44fff;
+  color: #e2e2f0;
+  font-family: "Fira Code", "Monospace", monospace;
+}
+
+#lookingGlass .lg-dialog {
+  color: #b44fff;
+}
+
+/* ── Scrollbars ──────────────────────────────────────────────────────────── */
+
+.vscrollbar,
+.hscrollbar {
+  background-color: transparent;
+}
+
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+  background-color: rgba(180, 79, 255, 0.35);
+  border-radius: 6px;
+  min-width: 6px;
+  min-height: 6px;
+}
+
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#hhandle:hover {
+  background-color: rgba(180, 79, 255, 0.6);
+}
