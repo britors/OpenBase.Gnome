@@ -61,47 +61,89 @@
 @define-color shade_color             rgba(0,0,0,0.35);
 @define-color scrollbar_outline_color rgba(0,0,0,0.5);
 
-/* ── Window buttons (close/min/max) — always purple ─────────────────────── */
+/* ── Window buttons (close/min/max) — macOS style ───────────────────────── */
 
 headerbar windowcontrols button,
 .titlebar windowcontrols button {
   border-radius: 50%;
-  padding: 5px;
-  min-width: 16px;
-  min-height: 16px;
+  padding: 0;
+  min-width: 14px;
+  min-height: 14px;
   border: none;
-  background-color: @accent_bg_color;
-  color: @accent_fg_color;
-  transition: background-color 150ms;
+  transition: background-color 150ms, opacity 150ms;
 }
 
 headerbar windowcontrols button image,
 .titlebar windowcontrols button image {
-  color: rgba(255, 255, 255, 0.9);
-  -gtk-icon-size: 12px;
+  opacity: 0;
+  -gtk-icon-size: 10px;
+  transition: opacity 150ms;
 }
 
+headerbar windowcontrols:hover button image,
+.titlebar windowcontrols:hover button image {
+  opacity: 1;
+}
+
+/* Close — vermelho */
 headerbar windowcontrols button.close,
 .titlebar windowcontrols button.close {
-  color: white;
+  background-color: #FF5F57;
+  color: #7A1000;
 }
 
-headerbar windowcontrols button:hover,
-.titlebar windowcontrols button:hover {
-  background-color: #c878ff;
+headerbar windowcontrols button.close:hover,
+.titlebar windowcontrols button.close:hover {
+  background-color: #EC4441;
 }
 
-headerbar windowcontrols button:active,
-.titlebar windowcontrols button:active {
-  background-color: #8833cc;
+headerbar windowcontrols button.close:active,
+.titlebar windowcontrols button.close:active {
+  background-color: #C03535;
 }
 
+/* Minimize — amarelo */
+headerbar windowcontrols button.minimize,
+.titlebar windowcontrols button.minimize {
+  background-color: #FEBC2E;
+  color: #7A4E00;
+}
+
+headerbar windowcontrols button.minimize:hover,
+.titlebar windowcontrols button.minimize:hover {
+  background-color: #E0A215;
+}
+
+headerbar windowcontrols button.minimize:active,
+.titlebar windowcontrols button.minimize:active {
+  background-color: #B88000;
+}
+
+/* Maximize — verde */
+headerbar windowcontrols button.maximize,
+.titlebar windowcontrols button.maximize {
+  background-color: #28C840;
+  color: #006B19;
+}
+
+headerbar windowcontrols button.maximize:hover,
+.titlebar windowcontrols button.maximize:hover {
+  background-color: #12AE28;
+}
+
+headerbar windowcontrols button.maximize:active,
+.titlebar windowcontrols button.maximize:active {
+  background-color: #0A8C1F;
+}
+
+/* Backdrop (janela sem foco) — cinza sutil */
 headerbar:backdrop windowcontrols button,
 .titlebar:backdrop windowcontrols button {
-  background-color: alpha(@accent_bg_color, 0.35);
+  background-color: #4a4a5a;
+  opacity: 0.6;
 }
 
 headerbar:backdrop windowcontrols button image,
 .titlebar:backdrop windowcontrols button image {
-  color: rgba(255, 255, 255, 0.35);
+  opacity: 0;
 }

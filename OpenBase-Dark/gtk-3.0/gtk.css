@@ -174,49 +174,90 @@ button.flat:active {
   background-color: alpha(@accent_color, 0.2);
 }
 
-/* Window buttons (close/min/max) — always purple */
+/* Window buttons (close/min/max) — macOS style */
 .titlebar button.titlebutton,
 headerbar button.titlebutton {
   border-radius: 50%;
-  padding: 5px;
-  min-width: 16px;
-  min-height: 16px;
+  padding: 0;
+  min-width: 14px;
+  min-height: 14px;
   border: none;
-  background-color: @accent_color;
-  color: white;
-  transition: background-color 150ms;
+  transition: background-color 150ms, opacity 150ms;
 }
 
 .titlebar button.titlebutton image,
 headerbar button.titlebutton image {
-  color: rgba(255, 255, 255, 0.9);
-  -gtk-icon-size: 12px;
+  opacity: 0;
+  -gtk-icon-size: 10px;
+  transition: opacity 150ms;
 }
 
+.titlebar button.titlebutton:hover image,
+headerbar button.titlebutton:hover image {
+  opacity: 1;
+}
+
+/* Close — vermelho */
 .titlebar button.titlebutton.close,
 headerbar button.titlebutton.close {
-  -gtk-icon-source: -gtk-icontheme("window-close-symbolic");
-  color: white;
+  background-color: #FF5F57;
+  color: #7A1000;
 }
 
-.titlebar button.titlebutton:hover,
-headerbar button.titlebutton:hover {
-  background-color: @accent_light;
+.titlebar button.titlebutton.close:hover,
+headerbar button.titlebutton.close:hover {
+  background-color: #EC4441;
 }
 
-.titlebar button.titlebutton:active,
-headerbar button.titlebutton:active {
-  background-color: @accent_dark;
+.titlebar button.titlebutton.close:active,
+headerbar button.titlebutton.close:active {
+  background-color: #C03535;
 }
 
+/* Minimize — amarelo */
+.titlebar button.titlebutton.minimize,
+headerbar button.titlebutton.minimize {
+  background-color: #FEBC2E;
+  color: #7A4E00;
+}
+
+.titlebar button.titlebutton.minimize:hover,
+headerbar button.titlebutton.minimize:hover {
+  background-color: #E0A215;
+}
+
+.titlebar button.titlebutton.minimize:active,
+headerbar button.titlebutton.minimize:active {
+  background-color: #B88000;
+}
+
+/* Maximize — verde */
+.titlebar button.titlebutton.maximize,
+headerbar button.titlebutton.maximize {
+  background-color: #28C840;
+  color: #006B19;
+}
+
+.titlebar button.titlebutton.maximize:hover,
+headerbar button.titlebutton.maximize:hover {
+  background-color: #12AE28;
+}
+
+.titlebar button.titlebutton.maximize:active,
+headerbar button.titlebutton.maximize:active {
+  background-color: #0A8C1F;
+}
+
+/* Backdrop (janela sem foco) — cinza sutil */
 .titlebar:backdrop button.titlebutton,
 headerbar:backdrop button.titlebutton {
-  background-color: alpha(@accent_color, 0.35);
+  background-color: #4a4a5a;
+  opacity: 0.6;
 }
 
 .titlebar:backdrop button.titlebutton image,
 headerbar:backdrop button.titlebutton image {
-  color: rgba(255, 255, 255, 0.35);
+  opacity: 0;
 }
 
 /* ── Text Entries ─────────────────────────────────────────────────────────── */
