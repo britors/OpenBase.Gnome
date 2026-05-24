@@ -62,15 +62,16 @@
 @define-color scrollbar_outline_color rgba(0,0,0,0.5);
 
 /* ── Window buttons (close/min/max) — macOS style ───────────────────────── */
+/* Círculo via radial-gradient: perfeito independente da área alocada pelo GTK */
 
 headerbar windowcontrols button,
 .titlebar windowcontrols button {
   all: unset;
-  border-radius: 50%;
-  margin: 0 3px;
-  min-width: 12px;
-  min-height: 12px;
-  transition: background-color 150ms;
+  min-width: 20px;
+  min-height: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px 12px;
 }
 
 headerbar windowcontrols button image,
@@ -81,62 +82,52 @@ headerbar windowcontrols button image,
 /* Close — vermelho */
 headerbar windowcontrols button.close,
 .titlebar windowcontrols button.close {
-  background-color: #FF5F57;
-  color: #7A1000;
+  background-image: radial-gradient(circle, #FF5F57 50%, transparent 50%);
 }
-
 headerbar windowcontrols button.close:hover,
 .titlebar windowcontrols button.close:hover {
-  background-color: #EC4441;
+  background-image: radial-gradient(circle, #EC4441 50%, transparent 50%);
 }
-
 headerbar windowcontrols button.close:active,
 .titlebar windowcontrols button.close:active {
-  background-color: #C03535;
+  background-image: radial-gradient(circle, #C03535 50%, transparent 50%);
 }
 
 /* Minimize — amarelo */
 headerbar windowcontrols button.minimize,
 .titlebar windowcontrols button.minimize {
-  background-color: #FEBC2E;
-  color: #7A4E00;
+  background-image: radial-gradient(circle, #FEBC2E 50%, transparent 50%);
 }
-
 headerbar windowcontrols button.minimize:hover,
 .titlebar windowcontrols button.minimize:hover {
-  background-color: #E0A215;
+  background-image: radial-gradient(circle, #E0A215 50%, transparent 50%);
 }
-
 headerbar windowcontrols button.minimize:active,
 .titlebar windowcontrols button.minimize:active {
-  background-color: #B88000;
+  background-image: radial-gradient(circle, #B88000 50%, transparent 50%);
 }
 
 /* Maximize — verde */
 headerbar windowcontrols button.maximize,
 .titlebar windowcontrols button.maximize {
-  background-color: #28C840;
-  color: #006B19;
+  background-image: radial-gradient(circle, #28C840 50%, transparent 50%);
 }
-
 headerbar windowcontrols button.maximize:hover,
 .titlebar windowcontrols button.maximize:hover {
-  background-color: #12AE28;
+  background-image: radial-gradient(circle, #12AE28 50%, transparent 50%);
 }
-
 headerbar windowcontrols button.maximize:active,
 .titlebar windowcontrols button.maximize:active {
-  background-color: #0A8C1F;
+  background-image: radial-gradient(circle, #0A8C1F 50%, transparent 50%);
 }
 
 /* Backdrop (janela sem foco) — cinza sutil */
-headerbar:backdrop windowcontrols button,
-.titlebar:backdrop windowcontrols button {
-  background-color: #4a4a5a;
+headerbar:backdrop windowcontrols button.close,
+headerbar:backdrop windowcontrols button.minimize,
+headerbar:backdrop windowcontrols button.maximize,
+.titlebar:backdrop windowcontrols button.close,
+.titlebar:backdrop windowcontrols button.minimize,
+.titlebar:backdrop windowcontrols button.maximize {
+  background-image: radial-gradient(circle, #4a4a5a 50%, transparent 50%);
   opacity: 0.6;
-}
-
-headerbar:backdrop windowcontrols button image,
-.titlebar:backdrop windowcontrols button image {
-  opacity: 0;
 }

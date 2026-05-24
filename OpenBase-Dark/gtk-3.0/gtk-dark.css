@@ -175,19 +175,19 @@ button.flat:active {
 }
 
 /* Window buttons (close/min/max) — macOS style */
+/* Círculo via radial-gradient: perfeito independente da área alocada pelo GTK */
 .titlebar button.titlebutton,
 headerbar button.titlebutton {
-  border-radius: 50%;
   padding: 0;
-  margin: 0 3px;
-  min-width: 12px;
-  min-height: 12px;
+  margin: 0;
+  min-width: 20px;
+  min-height: 20px;
   border: none;
   box-shadow: none;
   outline: none;
-  background-image: none;
-  -gtk-outline-radius: 50%;
-  transition: background-color 150ms;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 12px 12px;
 }
 
 .titlebar button.titlebutton image,
@@ -198,64 +198,54 @@ headerbar button.titlebutton image {
 /* Close — vermelho */
 .titlebar button.titlebutton.close,
 headerbar button.titlebutton.close {
-  background-color: #FF5F57;
-  color: #7A1000;
+  background-image: radial-gradient(circle, #FF5F57 50%, transparent 50%);
 }
-
 .titlebar button.titlebutton.close:hover,
 headerbar button.titlebutton.close:hover {
-  background-color: #EC4441;
+  background-image: radial-gradient(circle, #EC4441 50%, transparent 50%);
 }
-
 .titlebar button.titlebutton.close:active,
 headerbar button.titlebutton.close:active {
-  background-color: #C03535;
+  background-image: radial-gradient(circle, #C03535 50%, transparent 50%);
 }
 
 /* Minimize — amarelo */
 .titlebar button.titlebutton.minimize,
 headerbar button.titlebutton.minimize {
-  background-color: #FEBC2E;
-  color: #7A4E00;
+  background-image: radial-gradient(circle, #FEBC2E 50%, transparent 50%);
 }
-
 .titlebar button.titlebutton.minimize:hover,
 headerbar button.titlebutton.minimize:hover {
-  background-color: #E0A215;
+  background-image: radial-gradient(circle, #E0A215 50%, transparent 50%);
 }
-
 .titlebar button.titlebutton.minimize:active,
 headerbar button.titlebutton.minimize:active {
-  background-color: #B88000;
+  background-image: radial-gradient(circle, #B88000 50%, transparent 50%);
 }
 
 /* Maximize — verde */
 .titlebar button.titlebutton.maximize,
 headerbar button.titlebutton.maximize {
-  background-color: #28C840;
-  color: #006B19;
+  background-image: radial-gradient(circle, #28C840 50%, transparent 50%);
 }
-
 .titlebar button.titlebutton.maximize:hover,
 headerbar button.titlebutton.maximize:hover {
-  background-color: #12AE28;
+  background-image: radial-gradient(circle, #12AE28 50%, transparent 50%);
 }
-
 .titlebar button.titlebutton.maximize:active,
 headerbar button.titlebutton.maximize:active {
-  background-color: #0A8C1F;
+  background-image: radial-gradient(circle, #0A8C1F 50%, transparent 50%);
 }
 
 /* Backdrop (janela sem foco) — cinza sutil */
-.titlebar:backdrop button.titlebutton,
-headerbar:backdrop button.titlebutton {
-  background-color: #4a4a5a;
+.titlebar:backdrop button.titlebutton.close,
+.titlebar:backdrop button.titlebutton.minimize,
+.titlebar:backdrop button.titlebutton.maximize,
+headerbar:backdrop button.titlebutton.close,
+headerbar:backdrop button.titlebutton.minimize,
+headerbar:backdrop button.titlebutton.maximize {
+  background-image: radial-gradient(circle, #4a4a5a 50%, transparent 50%);
   opacity: 0.6;
-}
-
-.titlebar:backdrop button.titlebutton image,
-headerbar:backdrop button.titlebutton image {
-  opacity: 0;
 }
 
 /* ── Text Entries ─────────────────────────────────────────────────────────── */
