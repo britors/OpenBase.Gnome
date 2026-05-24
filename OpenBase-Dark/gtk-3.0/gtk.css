@@ -193,6 +193,12 @@ headerbar button.titlebutton image {
   -gtk-icon-size: 12px;
 }
 
+.titlebar button.titlebutton.close,
+headerbar button.titlebutton.close {
+  -gtk-icon-source: -gtk-icontheme("window-close-symbolic");
+  color: white;
+}
+
 .titlebar button.titlebutton:hover,
 headerbar button.titlebutton:hover {
   background-color: @accent_light;

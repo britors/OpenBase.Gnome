@@ -78,6 +78,12 @@ headerbar windowcontrols button,
 headerbar windowcontrols button image,
 .titlebar windowcontrols button image {
   color: rgba(255, 255, 255, 0.9);
+  -gtk-icon-size: 12px;
+}
+
+headerbar windowcontrols button.close,
+.titlebar windowcontrols button.close {
+  color: white;
 }
 
 headerbar windowcontrols button:hover,
