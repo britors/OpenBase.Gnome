@@ -2,6 +2,10 @@
 
 Dark GNOME theme inspired by the OpenBase color palette — deep navy backgrounds with purple-to-pink accent gradients.
 
+## Screenshot
+
+![OpenBase Dark Theme](assets/screenshot.png)
+
 ## Color Palette
 
 | Role | Color |
