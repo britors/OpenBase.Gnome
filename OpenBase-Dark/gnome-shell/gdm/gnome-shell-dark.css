@@ -1,15 +1,14 @@
 /* OpenBase Dark — GDM Login Theme */
 
-/* ── Stage ───────────────────────────────────────────────────────────────── */
+/* ── Stage / Background ──────────────────────────────────────────────────── */
 
+/* Stage cobre o fundo inteiro no GDM; lockDialogGroup como fallback */
 stage {
   font-family: "Inter", "Cantarell", "Noto Sans", sans-serif;
   font-size: 11pt;
   color: #e2e2f0;
   background: #080a12 url("resource:///org/gnome/shell/theme/openbase-nebula.svg") center center / cover no-repeat;
 }
-
-/* ── Background ──────────────────────────────────────────────────────────── */
 
 #lockDialogGroup {
   background: transparent url("resource:///org/gnome/shell/theme/openbase-nebula.svg") center center / cover no-repeat;

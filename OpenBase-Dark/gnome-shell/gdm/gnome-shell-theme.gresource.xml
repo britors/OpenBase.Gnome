@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/org/gnome/shell/theme">
+    <file>gnome-shell-dark.css</file>
     <file>gnome-shell.css</file>
     <file>openbase-nebula.svg</file>
   </gresource>
