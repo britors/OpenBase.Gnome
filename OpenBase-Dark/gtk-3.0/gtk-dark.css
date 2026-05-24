@@ -174,25 +174,43 @@ button.flat:active {
   background-color: alpha(@accent_color, 0.2);
 }
 
-/* Window buttons (close/min/max) */
+/* Window buttons (close/min/max) — always purple */
 .titlebar button.titlebutton,
 headerbar button.titlebutton {
   border-radius: 50%;
-  padding: 4px;
+  padding: 5px;
   min-width: 16px;
   min-height: 16px;
   border: none;
-  background-color: @surface_3;
+  background-color: @accent_color;
+  color: white;
+  transition: background-color 150ms;
+}
+
+.titlebar button.titlebutton image,
+headerbar button.titlebutton image {
+  color: rgba(255, 255, 255, 0.9);
+  -gtk-icon-size: 12px;
 }
 
 .titlebar button.titlebutton:hover,
 headerbar button.titlebutton:hover {
-  background-color: @accent_color;
+  background-color: @accent_light;
 }
 
-.titlebar button.titlebutton.close:hover,
-headerbar button.titlebutton.close:hover {
-  background-color: @destructive_color;
+.titlebar button.titlebutton:active,
+headerbar button.titlebutton:active {
+  background-color: @accent_dark;
+}
+
+.titlebar:backdrop button.titlebutton,
+headerbar:backdrop button.titlebutton {
+  background-color: alpha(@accent_color, 0.35);
+}
+
+.titlebar:backdrop button.titlebutton image,
+headerbar:backdrop button.titlebutton image {
+  color: rgba(255, 255, 255, 0.35);
 }
 
 /* ── Text Entries ─────────────────────────────────────────────────────────── */

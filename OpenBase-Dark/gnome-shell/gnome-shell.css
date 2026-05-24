@@ -102,7 +102,17 @@ stage {
 .app-well-app .overview-icon,
 .dash-item-container .overview-icon {
   border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
   transition-duration: 150ms;
+}
+
+/* GNOME 46+ adds an icon-background pill behind each dash icon — suppress it */
+.overview-icon.icon-with-background {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .app-well-app:hover .overview-icon {

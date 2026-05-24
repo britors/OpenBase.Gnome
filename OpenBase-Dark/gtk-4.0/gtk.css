@@ -60,3 +60,42 @@
 
 @define-color shade_color             rgba(0,0,0,0.35);
 @define-color scrollbar_outline_color rgba(0,0,0,0.5);
+
+/* ── Window buttons (close/min/max) — always purple ─────────────────────── */
+
+headerbar windowcontrols button,
+.titlebar windowcontrols button {
+  border-radius: 50%;
+  padding: 5px;
+  min-width: 16px;
+  min-height: 16px;
+  border: none;
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+  transition: background-color 150ms;
+}
+
+headerbar windowcontrols button image,
+.titlebar windowcontrols button image {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+headerbar windowcontrols button:hover,
+.titlebar windowcontrols button:hover {
+  background-color: #c878ff;
+}
+
+headerbar windowcontrols button:active,
+.titlebar windowcontrols button:active {
+  background-color: #8833cc;
+}
+
+headerbar:backdrop windowcontrols button,
+.titlebar:backdrop windowcontrols button {
+  background-color: alpha(@accent_bg_color, 0.35);
+}
+
+headerbar:backdrop windowcontrols button image,
+.titlebar:backdrop windowcontrols button image {
+  color: rgba(255, 255, 255, 0.35);
+}
