@@ -1,0 +1,187 @@
+/* OpenBase Dark — GDM Login Theme */
+
+/* ── Stage ───────────────────────────────────────────────────────────────── */
+
+stage {
+  font-family: "Inter", "Cantarell", "Noto Sans", sans-serif;
+  font-size: 11pt;
+  color: #e2e2f0;
+  background-color: #080a12;
+}
+
+/* ── Background ──────────────────────────────────────────────────────────── */
+
+#lockDialogGroup {
+  background-image: url("resource:///org/gnome/shell/theme/openbase-nebula.svg");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* ── Panel / Top Bar ─────────────────────────────────────────────────────── */
+
+#panel {
+  background-color: rgba(8, 10, 18, 0.70);
+  color: #e2e2f0;
+  height: 32px;
+  border-bottom: 1px solid rgba(30, 32, 64, 0.5);
+}
+
+#panel .panel-button {
+  color: #e2e2f0;
+  padding: 0 8px;
+  border-radius: 0;
+  transition-duration: 150ms;
+}
+
+#panel .panel-button:hover {
+  background-color: rgba(180, 79, 255, 0.15);
+}
+
+#panel #dateMenu .clock {
+  color: #e2e2f0;
+  font-weight: 500;
+}
+
+/* ── Login Dialog Card ───────────────────────────────────────────────────── */
+
+.login-dialog {
+  background-color: rgba(13, 15, 26, 0.88);
+  border: 1px solid rgba(30, 32, 64, 0.85);
+  border-radius: 20px;
+  padding: 40px 48px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.8),
+              0 0 0 1px rgba(180, 79, 255, 0.08);
+  color: #e2e2f0;
+}
+
+/* ── User list (seleção de usuário) ──────────────────────────────────────── */
+
+.user-list {
+  background-color: transparent;
+}
+
+.user-list-item {
+  background-color: rgba(26, 28, 46, 0.5);
+  border: 1px solid rgba(30, 32, 64, 0.6);
+  border-radius: 12px;
+  padding: 12px 16px;
+  transition-duration: 150ms;
+  color: #e2e2f0;
+}
+
+.user-list-item:hover {
+  background-color: rgba(180, 79, 255, 0.15);
+  border-color: rgba(180, 79, 255, 0.4);
+}
+
+.user-list-item:selected,
+.user-list-item:checked {
+  background-color: rgba(180, 79, 255, 0.2);
+  border-color: #b44fff;
+}
+
+/* ── Usuário ─────────────────────────────────────────────────────────────── */
+
+.user-widget-label {
+  color: #e2e2f0;
+  font-size: 18pt;
+  font-weight: 300;
+}
+
+.user-icon {
+  border-radius: 50%;
+  border: 2px solid rgba(180, 79, 255, 0.5);
+}
+
+/* ── Campo de senha ──────────────────────────────────────────────────────── */
+
+.login-dialog-prompt-label {
+  color: #8888aa;
+  font-size: 10pt;
+  padding-bottom: 4px;
+}
+
+.login-dialog-prompt-entry {
+  background-color: rgba(26, 28, 46, 0.8);
+  color: #e2e2f0;
+  border: 1px solid #1e2040;
+  border-radius: 10px;
+  padding: 10px 14px;
+  caret-color: #b44fff;
+  min-width: 260px;
+}
+
+.login-dialog-prompt-entry:focus {
+  border-color: #b44fff;
+  box-shadow: 0 0 0 2px rgba(180, 79, 255, 0.2);
+}
+
+/* ── Mensagens de erro ───────────────────────────────────────────────────── */
+
+.login-dialog-message-label {
+  color: #ff5572;
+  font-size: 9.5pt;
+  padding-top: 4px;
+}
+
+/* ── Botão de login ──────────────────────────────────────────────────────── */
+
+.login-dialog-button {
+  background-color: rgba(180, 79, 255, 0.2);
+  border: 1px solid #b44fff;
+  border-radius: 10px;
+  color: #e2e2f0;
+  padding: 8px 24px;
+  transition-duration: 150ms;
+}
+
+.login-dialog-button:hover {
+  background-color: rgba(180, 79, 255, 0.35);
+}
+
+.login-dialog-button:active {
+  background-color: rgba(180, 79, 255, 0.5);
+}
+
+/* ── "Não está na lista?" ────────────────────────────────────────────────── */
+
+.login-dialog-not-listed-button {
+  color: #8888aa;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background-color: transparent;
+  border: none;
+}
+
+.login-dialog-not-listed-button:hover {
+  color: #b44fff;
+  background-color: rgba(180, 79, 255, 0.1);
+}
+
+/* ── Seletor de sessão ───────────────────────────────────────────────────── */
+
+.login-dialog-session-list-button {
+  color: #8888aa;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: rgba(26, 28, 46, 0.5);
+  border: 1px solid #1e2040;
+}
+
+.login-dialog-session-list-button:hover {
+  background-color: rgba(180, 79, 255, 0.15);
+  border-color: rgba(180, 79, 255, 0.4);
+  color: #b44fff;
+}
+
+/* ── Spinner ─────────────────────────────────────────────────────────────── */
+
+.login-dialog-spinner {
+  color: #b44fff;
+}
+
+/* ── Fingerprint / smart card ────────────────────────────────────────────── */
+
+.finger-print-icon {
+  color: #b44fff;
+}
