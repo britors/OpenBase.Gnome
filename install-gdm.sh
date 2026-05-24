@@ -46,6 +46,7 @@ BUILD_OUT="$GDM_SRC/gnome-shell-theme.gresource"
 TMP=$(mktemp -d)
 trap 'rm -rf "$TMP"' EXIT
 
+cp "$GDM_SRC/gnome-shell-dark.css" "$TMP/"
 cp "$GDM_SRC/gnome-shell.css" "$TMP/"
 cp "$GDM_SRC/$SVG_NAME" "$TMP/"
 cp "$GDM_SRC/gnome-shell-theme.gresource.xml" "$TMP/"
